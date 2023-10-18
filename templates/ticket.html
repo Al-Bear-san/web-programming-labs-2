@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 3{% endblock %}
+
+{% block main %}
+    <h1>Ваш билет</h1>
+    <br>
+    <div>ФИО: {{ name }}</div>
+    <div>Тип: {{ adulthood }}</div>
+    <div>Полка: {{ shelf }}</div>
+    <div>Багаж: {{ luggage }}</div>
+    <div>Возраст: {{ age }}</div>
+    <div>Пункт выезда: {{ exit }}</div>
+    <div>Пункт назначения: {{ purpose }}</div>
+    <div>Дата поездки: {{ datapo }}</div>
+    <br>
+    <div>
+        <a href="/lab3/">Вернуться</a>
+    </div>
+{% endblock %}
