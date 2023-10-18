@@ -13,6 +13,7 @@ def menu():
         <html>
             <head>
                 <title>НГТУ, ФБ, Лабораторные работы</title>
+                <link rel="stylesheet" href="static/main.css">
             </head>
             <body>
                 <header>
@@ -21,6 +22,7 @@ def menu():
 
                 <ol>
                     <li><a href="http://127.0.0.1:5000/lab1">Первая лабораторная</a>
+                    <li><a href="http://127.0.0.1:5000/lab2/example">Вторая лабораторная</a>
                 </ol>
 
                 <footer>
@@ -37,6 +39,7 @@ def lab1():
 <html>
     <head>
         <title>Сыпченко Александр Евгеньевич, Лабораторная 1</title>
+        <link rel="stylesheet" href="static/main.css">
     </head>
     <body>
         <header>
@@ -163,9 +166,16 @@ def anime():
 
 @app.route('/lab2/example')
 def example():
-    name = 'Сыпченко Александр Евгеньевич'
-    nomb = 2
-    grup = 'ФБИ-14'
-    kurs = 3
-    return render_template('example.html', name=name, nomb=nomb, grup=grup, kurs=kurs)
+    name, nomb, grup, kurs = 'Сыпченко Александр Евгеньевич', 2, 'ФБИ-14', '3 курс'
+    fruits = [
+        {'name': 'яблоки', 'price': 100},
+        {'name': 'груши', 'price': 120},
+        {'name': 'апельсины', 'price': 80},
+        {'name': 'мандарины', 'price': 95},
+        {'name': 'манго', 'price': 321}
+    ]
+    return render_template('example.html', name=name, nomb=nomb, grup=grup, kurs=kurs, fruits=fruits)
 
+@app.route('/lab2/')
+def lab2():
+    return render_template('lab2.html')
