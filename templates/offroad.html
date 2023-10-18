@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block lab %}OFFROAD{% endblock %}
+
+{% block main %}
+    <div>
+        <h2>TOYOTA</h2>
+        <img src="{{ url_for('static' , filename='TOYOTA.jpg') }}">
+        <p>Легенда и мечта.</p>
+    </div>
+    <div>
+        <h2>Jeep</h2>
+        <img src="{{ url_for('static' , filename='djip.png') }}">
+        <p>Американская классика.</p>
+    </div>
+    <div>
+        <h2>НИВА</h2>
+        <img src="{{ url_for('static' , filename='niva.jpg') }}">
+        <p>Легенда легенд.</p>
+    </div>
+    <div>
+        <h2>УАЗ</h2>
+        <img src="{{ url_for('static' , filename='UAZS.jpg') }}">
+        <p>Дом на колёса только для тайги</p>
+    </div>
+    <div>
+        <h2>Пикап</h2>
+        <img src="{{ url_for('static' , filename='picap.jpg') }}">
+        <p>Удобно и легко</p>
+    </div>
+{% endblock %}

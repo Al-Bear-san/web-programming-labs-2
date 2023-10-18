@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сыпченко Александр, Лабораторная работа {{ nomb }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css')}}">
+    
 </head>
 <body>
     <header>
@@ -19,6 +20,11 @@
         <ul>
             {% for f in fruits %}
             <li>{{ f.name }}: {{ f.price }} &#x20bd;</li>
+            {% endfor %}
+        </ul>
+        <ul>
+            {% for b in books %}
+            <li>{{ b.book }}, {{ b.author }}, {{ b.genre }}, {{ b.number }} &#x20bd;</li>
             {% endfor %}
         </ul>
     </main>
