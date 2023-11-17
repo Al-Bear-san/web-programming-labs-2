@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 4{% endblock %}
+
+{% block main %}
+    <h1>Заказ зерна</h1>
+    <form action="/lab4/grain_order" method="post">
+        <div>
+        <label for="grain_type">Зерно:</label>
+        <select name="grain_type" id="grain_type">
+            <option value="ячмень">Ячмень</option>
+            <option value="овёс">Овёс</option>
+            <option value="пшеница">Пшеница</option>
+            <option value="рожь">Рожь</option>
+        </select>
+        </div>
+
+        <div>
+        <label for="weight">Вес (т):</label>
+        <input type="number" name="weight" id="weight" step="0.01" required>
+        </div><br>
+
+        <button type="submit"  href="/lab4/grain_order">Оформить заказ</button>
+    </form>
+{% endblock %}
