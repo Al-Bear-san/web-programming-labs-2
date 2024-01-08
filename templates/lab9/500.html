@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 9{% endblock %}
+
+{% block main %}
+    <h1>У ВАС ОШИБКА 500!</h1>
+    <p>Ладно, я пошутил, нормально все! Держи оленя!</p>
+    <p><a href="/menu">Иди на главную</a></p>
+
+    <img src="{{ url_for('static' , filename='error2.jpg') }}" style="width: 550px;">
+{% endblock %}

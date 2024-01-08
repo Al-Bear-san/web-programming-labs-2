@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 9 {% endblock %}
+
+{% block main %}
+    <h1>Страница не найдена</h1>
+    <p>Уйди прочь! Подавись мандарином !</p>
+    <p><a href="/menu">Перейти на главную страницу</a></p>
+    <img src="{{ url_for('static' , filename='error1.jpg') }}" style="width: 550px;">
+{% endblock %}
