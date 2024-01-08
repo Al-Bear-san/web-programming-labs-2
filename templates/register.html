@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 5{% endblock %}
+
+{% block main %}
+<form method="post" style="border: 2px solid;border-radius: 8px; background-color: lightseagreen; font-size: 17px;padding: 15px;height: min-content;width: 446px;margin: 10px auto;font-weight: bold;text-align: center;">
+    <h1>Страница регистрации</h1>
+
+    <div style="padding: 20px;">
+        <input type="text" name="username" placeholder="username" style="height: 35px;width: 212px;">
+        <label for="username">Логин</label>
+    </div>
+
+    <div style="padding: 20px;">
+        <input type="text" name="password" placeholder="password" style="height: 35px;width: 212px;" maxlength="90">
+        <label for="password">Пароль</label>
+    </div>
+    <div>
+        <button type="submit" style="padding: 20px;height: 35px;width: 212px; background: lightseagreen;">Зарегистрироваться</button>
+    </div>
+    <div style="color: brown; padding: 20px; height: 35px;width:auto;">
+       {{ errors }}
+    </div>
+</form>
+{% endblock %}

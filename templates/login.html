@@ -1,23 +1,25 @@
 {% extends "base.html" %}
 
-{% block lab %}Лабораторная работа 4{% endblock %}
+{% block lab %}Лабораторная работа 2{% endblock %}
 
 {% block main %}
-    <h1>Вход</h1>
-    <h2>Пожалуйста, авторизуйтесь</h2>
-    <div>{{ error }}</div>
-    <form method="post">
-        <div>
-            <label for="UserName">Пользователь:</label>
-            <input type="text" id="UserName" name="UserName">
-        </div>
-        <div>
-            <label for="password">Пороль:</label>
-            <input type="password" id="password" name="password">
-        </div>
-        <div>
-            <button type="submit">Войти</button>
-            <button type="reset">Отмена</button>
-        </div>
-    </form>
+<form method="post" style="border: 2px solid;border-radius: 8px; background-color: lightseagreen; color: rgb(32, 19, 61);border-color: darkmagenta;font-size: 17px;padding: 15px;height: min-content;width: 446px;margin: 10px auto;font-weight: bold;text-align: center;">
+    <h1>Страница авторизации</h1>
+
+    <div style="padding: 20px;">
+        <input type="text" name="username" placeholder="username" style="height: 35px;width: 212px;">
+        <label for="username">Логин</label>
+    </div>
+
+    <div style="padding: 20px;">
+        <input type="text" name="password" placeholder="password" style="height: 35px;width: 212px;" maxlength="90">
+        <label for="password">Пароль</label>
+    </div>
+    <div>
+        <button type="submit" style="padding:20px; height:35px; width:212px; background:lightseagreen;">Авторизироваться</button>
+    </div>
+    <div style="color: brown; padding:20px; height:35px; width:auto;">
+       {{ errors }}
+    </div>
+</form>
 {% endblock %}

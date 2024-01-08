@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сыпченко Александр, Лабораторная работа 5.</title>
+
+</head>
+<body>
+    <header style="border-bottom: 2px solid;">
+        <div style = "background: white;font-size: 20px;display: flex;text-align: center;">
+            <a style="margin: 3%;font-weight: bold;" href="/lab5">
+                База знаний
+            </a>
+            <div style="margin: 3%;padding-left: 87px;text-decoration: none;">
+                <a href="/lab5/articles_all" style="padding-right: 50px;">Просмотреть заметки</a>
+                <a href="/lab5/new_article">Создать заметку</a>
+            </div>
+            <div style="margin: 3%; display: flex;">
+                <a href="/lab5/login" style="padding-right: 50px;">Логин</a>
+                <a href="/lab5/register">Регистрация</a>
+                <div style="padding-left: 50px;">{{username}}</div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <br>
+        <form action="/lab5/logout">
+            <input type="submit" value="Logout">
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 6{% endblock %}
+
+{% block main %}
+<div style = "background: white;font-size: 20px;display: flex;text-align: center; border-bottom: 2px solid;">
+    <a style="margin: 3%;font-weight: bold;" href="/lab6">База знаний</a>
+    <div style="margin: 3%;padding-left: 87px;text-decoration: none;">
+        <a href="/lab6/articles_all" style="padding-right: 50px;">Просмотреть заметки</a>
+        <a href="/lab6/new_article">Создать заметку</a>
+    </div>
+    <div style="margin: 3%; display: flex;">
+        <a href="/lab6/login" style="padding-right: 50px;">Логин</a>
+        <a href="/lab6/register">Регистрация</a>
+        <div style="padding-left: 50px;">{{username}}</div>
+    </div>
+</div>
+
+<br>
+<form action="/lab6/logout">
+    <input type="submit" value="Logout">
+</form>
+{% endblock %}
