@@ -3,7 +3,11 @@
 {% block lab %}Лабораторная работа 7{% endblock %}
 
 {% block script %}
+<<<<<<< HEAD
 <script src="{{ url_for('static', filename='lab7/drink.js') }}"></script>
+=======
+    <script src="{{ url_for('static', filename='lab7/drink.js') }}"></script>
+>>>>>>> 1663294acd1edade7083f8e87f7d10cf51663658
 {% endblock %}
 
 {% block main %}
@@ -11,6 +15,10 @@
 
         <div id="position">
         <div style="font-size: 20px;">Выбор напитка</div>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 1663294acd1edade7083f8e87f7d10cf51663658
         <label>
             <input type="radio" value="cofee" name="drink" checked>Кофе  120р
         </label>
@@ -21,7 +29,13 @@
             <input type="radio" value="green-tea" name="drink">зеленый чай 70р
         </label>
 
+<<<<<<< HEAD
         <div style="color: rgb(56, 13, 97); font-size: 20px;">Выбор добавки</div>
+=======
+
+        <div style="color: rgb(56, 13, 97); font-size: 20px;">Выбор добавки</div>
+
+>>>>>>> 1663294acd1edade7083f8e87f7d10cf51663658
         <label>
             <input type="checkbox" name="milk">Молоко 30р
         </label>
@@ -55,6 +69,10 @@
                 <button onclick="Pay()">Оплатить</button>
             </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1663294acd1edade7083f8e87f7d10cf51663658
         <div id="pay_result" style="display: none; color: green;"></div>
         <div id="error" style="display: none;color: red;"></div>
 {% endblock %}

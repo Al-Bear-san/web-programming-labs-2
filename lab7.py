@@ -1,4 +1,8 @@
 from flask import Blueprint, redirect, url_for, render_template, request, session, abort
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1663294acd1edade7083f8e87f7d10cf51663658
 lab7 = Blueprint("lab7",__name__)
 
 @lab7.route("/lab7/")
@@ -15,6 +19,10 @@ def api():
 
     if data['method'] == 'get-price':
         return get_price(data['params'])
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 1663294acd1edade7083f8e87f7d10cf51663658
     if data['method'] == 'pay':
         return pay(data['params'])
     
@@ -28,6 +36,10 @@ def calculate_price(params):
     milk = params['milk']
     sugar = params['sugar']
 
+<<<<<<< HEAD
+=======
+    #Напитки
+>>>>>>> 1663294acd1edade7083f8e87f7d10cf51663658
     if drink == 'cofee':
         price = 120
     elif drink == 'black-tea':
@@ -35,10 +47,18 @@ def calculate_price(params):
     else:
         price = 70
 
+<<<<<<< HEAD
+=======
+    #Допы
+>>>>>>> 1663294acd1edade7083f8e87f7d10cf51663658
     if milk:
         price += 30
     if sugar:
         price += 10
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 1663294acd1edade7083f8e87f7d10cf51663658
     return price
 
 def pay(params):
@@ -49,5 +69,9 @@ def pay(params):
     cvv = params['cvv']
     if len(cvv) != 3 or not cvv.isdigit():
         return {"result": None, "error": "Неверный номер CVV/CVC"}
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 1663294acd1edade7083f8e87f7d10cf51663658
     price =  calculate_price(params)
     return {"result": f'С карты {card_num} списано {price} руб', "error": None}

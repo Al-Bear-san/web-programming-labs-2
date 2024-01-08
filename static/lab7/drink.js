@@ -22,11 +22,19 @@ function getPrice(){
     })
     .then(function(data) {
         document.querySelector('#price').innerHTML = `Цена напитка: ${data.result} руб`;
+<<<<<<< HEAD
         document.querySelector('#price').style.display = '';
         document.querySelector('#pay').style.display = '';
     })
 }
 function Pay() {
+=======
+        document.querySelector('#price').style.display = 'block';   
+        document.querySelector('#pay').style.display = 'block';
+    })
+}
+/*function Pay() {
+>>>>>>> 1663294acd1edade7083f8e87f7d10cf51663658
     const card = document.querySelector('[name=card]').value;
     const cvv = document.querySelector('[name=cvv]').value;
     const milk = document.querySelector('[name=milk]').checked;
@@ -64,4 +72,8 @@ function Pay() {
             document.querySelector('#error').innerHTML = `${data.error}`;
         }
     })
+<<<<<<< HEAD
 }
+=======
+}*/
+>>>>>>> 1663294acd1edade7083f8e87f7d10cf51663658
